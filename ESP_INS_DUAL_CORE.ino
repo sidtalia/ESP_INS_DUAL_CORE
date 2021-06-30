@@ -185,7 +185,7 @@ void key_check()
     Serial.print(buf[i],HEX);Serial.print("||");Serial.println(EepromBuffer[i],HEX);
   }
   #endif
-  if(memcmp(buf, EepromBuffer, 32) != 0)
+  if(memcmp(buf, EepromBuffer, 32) == 0)
   {
     exit(0);
   }
